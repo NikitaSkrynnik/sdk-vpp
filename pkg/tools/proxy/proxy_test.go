@@ -45,7 +45,7 @@ const (
 func TestStartPerm(t *testing.T) {
 	t.Cleanup(func() { goleak.VerifyNone(t) })
 
-	tempDir := t.TempDir()
+	tempDirr := t.TempDir()
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
@@ -69,7 +69,7 @@ func TestStartPerm(t *testing.T) {
 
 	require.NoError(t, netns.Set(targetNS))
 
-	targetFile := "@" + path.Join(tempDir, "target")
+	targetFile := "@" + path.Join(tempDirr, "target")
 
 	l, err := net.Listen("unix", targetFile)
 	require.NoError(t, err)
@@ -84,7 +84,7 @@ func TestStartPerm(t *testing.T) {
 
 	require.NoError(t, netns.Set(defaultNS))
 
-	proxyFile := "@" + path.Join(tempDir, "proxy")
+	proxyFile := "@" + path.Join(tempDirr, "proxy")
 
 	require.NoError(t, proxy.Start(ctx, network, nsURL("proxy"), proxyFile, nsURL("target"), targetFile))
 
