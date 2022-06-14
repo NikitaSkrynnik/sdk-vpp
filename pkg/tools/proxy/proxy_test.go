@@ -14,8 +14,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//go:build linux && !linux && perm
-// +build linux,!linux,perm
+//go:build (linux || !linux) && perm
+// +build linux !linux
+// +build perm
 
 package proxy_test
 
