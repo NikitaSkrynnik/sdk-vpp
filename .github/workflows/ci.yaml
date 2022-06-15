@@ -7,9 +7,28 @@ on:
       - 'release/**'
 jobs:
   build-and-test:
-    uses: NikitaSkrynnik/.github/.github/workflows/build-and-test.yaml@build-and-test
-    with:
-      os: '["ubuntu-latest", "macos-latest", "windows-latest"]'
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        # tests need to be run as root (with sudo), windows doesn't support it
+        os: ["macos-latest", "windows-latest"]
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Setup Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.18.1
+      - name: Build
+        run: go build -race  ./...
+      - name: Test
+        run: go test -race ./...
+      - name: Test with permissions
+        run: |
+          count=$(go test ./... --list Perm -tags perm | wc -l)
+          if [ $count -ge 1 ]; then
+            sudo -E PATH="$PATH" bash -c "go test -race -run Perm ./... -tags=perm"
+          fi
       
   captureRunEnv:
     name: Capture CI Run Env
