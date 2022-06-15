@@ -25,7 +25,7 @@ jobs:
         run: go test -race ./...
       - name: Test with permissions
         run: |
-          count=$(go test ./... --list Perm -tags perm | wc -l)
+          count=$(go test ./... --list Perm -tags perm | grep Perm | wc -l)
           echo $count
           if [ $count -gt 1 ]; then
             echo IFFF
