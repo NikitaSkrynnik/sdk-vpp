@@ -16,6 +16,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
+// +build linux
+
 // Package proxy provides method for proxying socket from one net NS to other
 package proxy
 

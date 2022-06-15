@@ -16,6 +16,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build linux
+// +build linux
+
 package proxy
 
 import (
@@ -27,7 +30,7 @@ import (
 )
 
 const (
-	maxFDCount = 19
+	maxFDCount = 1
 	bufferSize = 128
 )
 

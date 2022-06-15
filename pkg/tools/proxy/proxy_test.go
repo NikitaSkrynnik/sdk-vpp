@@ -14,6 +14,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build perm
+// +build perm
+
 package proxy_test
 
 import (
@@ -42,7 +45,7 @@ const (
 func TestStartPerm(t *testing.T) {
 	t.Cleanup(func() { goleak.VerifyNone(t) })
 
-	tempDirr := t.TempDir()
+	tempDir := t.TempDir()
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
@@ -66,7 +69,7 @@ func TestStartPerm(t *testing.T) {
 
 	require.NoError(t, netns.Set(targetNS))
 
-	targetFile := "@" + path.Join(tempDirr, "target")
+	targetFile := "@" + path.Join(tempDir, "target")
 
 	l, err := net.Listen("unix", targetFile)
 	require.NoError(t, err)
@@ -81,7 +84,7 @@ func TestStartPerm(t *testing.T) {
 
 	require.NoError(t, netns.Set(defaultNS))
 
-	proxyFile := "@" + path.Join(tempDirr, "proxy")
+	proxyFile := "@" + path.Join(tempDir, "proxy")
 
 	require.NoError(t, proxy.Start(ctx, network, nsURL("proxy"), proxyFile, nsURL("target"), targetFile))
 
