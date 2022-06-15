@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         # tests need to be run as root (with sudo), windows doesn't support it
-        os: ["macos-latest", "windows-latest"]
+        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
     steps:
       - name: Check out code
         uses: actions/checkout@v2
