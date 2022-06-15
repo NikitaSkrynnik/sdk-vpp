@@ -24,7 +24,7 @@ jobs:
       - name: Test
         run: go test -race ./...
       - name: Test with permissions
-        if: ${{ !contains(${{ matrix.os }}, "windows") }}
+        if: ${{ contains(${{ matrix.os }}, "windows") == false}}
         run: |
           count=$(go test ./... --list Perm -tags perm | grep Perm | wc -l)
           echo $count
