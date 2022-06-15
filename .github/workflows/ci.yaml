@@ -24,12 +24,11 @@ jobs:
       - name: Test
         run: go test -race ./...
       - name: Test with permissions
-        if: contains(${{ matrix.os }}, "windows") == false 
+        if: ${{ !contains(${{ matrix.os }}, "windows") }}
         run: |
           count=$(go test ./... --list Perm -tags perm | grep Perm | wc -l)
           echo $count
-          if [ $count -gt 1 ]; then
-            echo IFFF
+          if [ $count -gt 0 ]; then
             sudo -E PATH="$PATH" bash -c "go test -race -run Perm ./... -tags=perm"
           fi
       
