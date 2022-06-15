@@ -26,7 +26,7 @@ jobs:
       - name: Test with permissions
         run: |
           count=$(go test ./... --list Perm -tags perm | wc -l)
-          if [ $count -ge 1 ]; then
+          if [ $count -gt 1 ]; then
             sudo -E PATH="$PATH" bash -c "go test -race -run Perm ./... -tags=perm"
           fi
       
