@@ -21,13 +21,13 @@ package connectioncontext
 
 import (
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/core/chain"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/core/chain"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/ipaddress"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/routes"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/ipaddress"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/routes"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/connectioncontext/mtu"
 )
 
 // NewClient creates a NetworkServiceClient chain element to set the ip address on a vpp interface

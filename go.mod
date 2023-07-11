@@ -1,18 +1,18 @@
-module github.com/networkservicemesh/sdk-vpp
+module github.com/NikitaSkrynnik/sdk-vpp
 
 go 1.20
 
 require (
 	git.fd.io/govpp.git v0.3.6-0.20210927044411-385ccc0d8ba9
+	github.com/NikitaSkrynnik/api v1.0.1-0.20230711064101-51396a9946fc
+	github.com/NikitaSkrynnik/govpp v0.0.0-20230711065959-e2b65ca34c90
+	github.com/NikitaSkrynnik/sdk v0.5.1-0.20230711064140-46e8d97d94b8
+	github.com/NikitaSkrynnik/sdk-kernel v0.0.0-20230711065033-29e761706a65
 	github.com/cilium/ebpf v0.10.0
 	github.com/edwarnicke/serialize v1.0.7
 	github.com/golang/protobuf v1.5.3
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/networkservicemesh/api v1.9.1-0.20230627143611-9785eacf9687
-	github.com/networkservicemesh/govpp v0.0.0-20230630105900-092690d52a97
-	github.com/networkservicemesh/sdk v0.5.1-0.20230710100721-01bb35f8c3d6
-	github.com/networkservicemesh/sdk-kernel v0.0.0-20230710101045-a25e30ad5d4f
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.3
 	github.com/thanhpk/randstr v1.0.4

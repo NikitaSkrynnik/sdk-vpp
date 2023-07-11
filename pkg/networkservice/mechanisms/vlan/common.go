@@ -26,15 +26,15 @@ import (
 
 	"git.fd.io/govpp.git/api"
 
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	vlanmech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/vlan"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	vlanmech "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/vlan"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 const (

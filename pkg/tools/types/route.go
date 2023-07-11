@@ -17,7 +17,7 @@
 package types
 
 import (
-	"github.com/networkservicemesh/govpp/binapi/fib_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/fib_types"
 )
 
 // IsV6toFibProto - returns fib_types.FIB_API_PATH_NH_PROTO_IP6 if isv6 is true

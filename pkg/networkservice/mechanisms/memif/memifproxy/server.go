@@ -28,13 +28,13 @@ import (
 
 	"github.com/golang/protobuf/ptypes/empty"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	memifMech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/memif"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/core/next"
-	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	memifMech "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/memif"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/core/next"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/postpone"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/proxy"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/proxy"
 )
 
 const memifNetwork = "unixpacket"

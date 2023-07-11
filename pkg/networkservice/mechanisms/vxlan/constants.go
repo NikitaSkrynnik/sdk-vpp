@@ -17,7 +17,7 @@
 package vxlan
 
 import (
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/vxlan"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/vxlan"
 )
 
 const (

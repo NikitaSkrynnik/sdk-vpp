@@ -28,18 +28,18 @@ import (
 	"github.com/thanhpk/randstr"
 	"github.com/vishvananda/netlink"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/kernel"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/kernel"
 
-	kernellink "github.com/networkservicemesh/sdk-kernel/pkg/kernel"
-	"github.com/networkservicemesh/sdk-kernel/pkg/kernel/tools/nshandle"
-	"github.com/networkservicemesh/sdk-kernel/pkg/kernel/tools/peer"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	kernellink "github.com/NikitaSkrynnik/sdk-kernel/pkg/kernel"
+	"github.com/NikitaSkrynnik/sdk-kernel/pkg/kernel/tools/nshandle"
+	"github.com/NikitaSkrynnik/sdk-kernel/pkg/kernel/tools/peer"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ethtool"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/link"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/mechutils"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ethtool"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/link"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/mechutils"
 )
 
 func create(ctx context.Context, conn *networkservice.Connection, isClient bool) error {

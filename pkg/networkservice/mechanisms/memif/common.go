@@ -29,17 +29,17 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	memifMech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/memif"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/payload"
-	"github.com/networkservicemesh/govpp/binapi/memif"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	memifMech "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/memif"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/payload"
+	"github.com/NikitaSkrynnik/govpp/binapi/memif"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 	"github.com/pkg/errors"
 	"github.com/vishvananda/netns"
 	"golang.org/x/sys/unix"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/up"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/up"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 // Connection aggregates the api.Connection and api.ChannelProvider interfaces

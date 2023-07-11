@@ -18,12 +18,12 @@ package xconnect
 
 import (
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/core/chain"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/core/chain"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/xconnect/l2xconnect"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/xconnect/l3xconnect"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/xconnect/l2xconnect"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/xconnect/l3xconnect"
 )
 
 // NewServer - creates new xconnect server chain element to that correctly handles payload.IP and payload.Ethernet

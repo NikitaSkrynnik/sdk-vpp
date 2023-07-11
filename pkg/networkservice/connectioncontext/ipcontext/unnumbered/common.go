@@ -23,13 +23,13 @@ import (
 	"github.com/pkg/errors"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 )
 
 func addDel(ctx context.Context, vppConn api.Connection, isClient, isAdd bool, loadIfaceFn func(ctx context.Context, isClient bool) (value interface_types.InterfaceIndex, ok bool)) error {

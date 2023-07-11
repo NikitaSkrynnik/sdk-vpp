@@ -24,17 +24,17 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/fib_types"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/govpp/binapi/l3xc"
+	"github.com/NikitaSkrynnik/govpp/binapi/fib_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/l3xc"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 func create(ctx context.Context, vppConn api.Connection, conn *networkservice.Connection) error {

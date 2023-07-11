@@ -26,13 +26,13 @@ import (
 	"github.com/pkg/errors"
 	"github.com/vishvananda/netlink"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/kernel"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/kernel"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-kernel/pkg/kernel/tools/peer"
+	"github.com/NikitaSkrynnik/sdk-kernel/pkg/kernel/tools/peer"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 func setMTU(ctx context.Context, conn *networkservice.Connection, isClient bool) error {

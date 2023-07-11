@@ -24,9 +24,9 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 	"github.com/pkg/errors"
 )
 

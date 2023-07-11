@@ -19,7 +19,7 @@ package ifindex
 import (
 	"context"
 
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 )
 
 // LoadInterfaceFn is alias for function that loads interface from index

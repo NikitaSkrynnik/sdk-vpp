@@ -17,7 +17,7 @@
 package kernel
 
 import (
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/kernel"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/kernel"
 )
 
 const (

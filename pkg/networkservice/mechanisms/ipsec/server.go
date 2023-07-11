@@ -24,16 +24,16 @@ import (
 	"github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	ipsecMech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/ipsec"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/payload"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/core/chain"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/core/next"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
-	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	ipsecMech "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/ipsec"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/payload"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/core/chain"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/core/next"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/utils/metadata"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/ipsec/mtu"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/pinhole"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/ipsec/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/pinhole"
 )
 
 type ipsecServer struct {

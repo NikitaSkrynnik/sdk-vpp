@@ -24,11 +24,11 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	wireguardMech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/wireguard"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/core/next"
-	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
-	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	wireguardMech "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/wireguard"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/core/next"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/utils/metadata"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/postpone"
 )
 
 type peerupClient struct {

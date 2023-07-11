@@ -17,7 +17,7 @@
 package memif
 
 import (
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/memif"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/memif"
 )
 
 const (

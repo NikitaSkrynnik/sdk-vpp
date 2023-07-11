@@ -23,13 +23,13 @@ import (
 	"github.com/pkg/errors"
 
 	"git.fd.io/govpp.git/api"
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/govpp/binapi/ip"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 func create(ctx context.Context, vppConn api.Connection, networkService string, t *vrfMap, isIPv6 bool) (vtfID uint32, err error) {

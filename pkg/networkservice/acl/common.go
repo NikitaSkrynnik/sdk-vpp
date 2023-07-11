@@ -24,13 +24,13 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/acl"
-	"github.com/networkservicemesh/govpp/binapi/acl_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/acl"
+	"github.com/NikitaSkrynnik/govpp/binapi/acl_types"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 )
 
 const (

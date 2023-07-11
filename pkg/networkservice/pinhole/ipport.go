@@ -21,8 +21,8 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/common"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/common"
 )
 
 // IPPort stores IP and port for an ACL rule

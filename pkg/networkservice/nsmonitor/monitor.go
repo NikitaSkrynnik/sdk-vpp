@@ -24,7 +24,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 )
 
 type netNSMonitor struct {

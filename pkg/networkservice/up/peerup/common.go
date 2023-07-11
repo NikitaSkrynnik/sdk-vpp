@@ -24,13 +24,13 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/govpp/binapi/wireguard"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/wireguard"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/wireguard/peer"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/wireguard/peer"
 )
 
 // Connection - simply combines tha api.Connection and api.ChannelProvider interfaces

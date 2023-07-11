@@ -23,11 +23,11 @@ import (
 	"os"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kerneltap"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kerneltap"
 )
 
 // NewServer return a NetworkServiceServer chain element that correctly handles the kernel Mechanism

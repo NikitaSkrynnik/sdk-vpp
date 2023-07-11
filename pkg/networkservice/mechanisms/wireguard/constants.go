@@ -17,7 +17,7 @@
 package wireguard
 
 import (
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/wireguard"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/wireguard"
 )
 
 const (

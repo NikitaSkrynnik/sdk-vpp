@@ -19,7 +19,7 @@ package ipaddress
 import (
 	"context"
 
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 )
 
 type options struct {

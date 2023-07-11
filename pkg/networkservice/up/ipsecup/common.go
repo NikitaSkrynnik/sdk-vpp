@@ -21,13 +21,13 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 // Connection - simply combines tha api.Connection and api.ChannelProvider interfaces

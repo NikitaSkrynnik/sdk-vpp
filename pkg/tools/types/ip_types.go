@@ -19,7 +19,7 @@ package types
 import (
 	"net"
 
-	"github.com/networkservicemesh/govpp/binapi/ip_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip_types"
 )
 
 // ToVppAddress - converts addr to ip_types.Address

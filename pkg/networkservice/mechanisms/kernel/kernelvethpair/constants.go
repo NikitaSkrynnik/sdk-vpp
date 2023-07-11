@@ -16,7 +16,7 @@
 
 package kernelvethpair
 
-import "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/kernel"
+import "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/kernel"
 
 const (
 	// MECHANISM string

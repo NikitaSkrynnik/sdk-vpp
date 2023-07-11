@@ -27,14 +27,14 @@ import (
 	"git.fd.io/govpp.git/api"
 	"github.com/pkg/errors"
 
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/govpp/binapi/ip"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Connection, loadIfIndex ifIndexFunc, isClient, isAdd bool) error {

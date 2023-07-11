@@ -20,11 +20,11 @@ import (
 	"context"
 	"strconv"
 
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/common"
 	"github.com/cilium/ebpf"
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/common"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/pinhole"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/pinhole"
 )
 
 type bpfObjects struct {

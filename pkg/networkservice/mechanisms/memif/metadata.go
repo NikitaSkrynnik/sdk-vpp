@@ -19,9 +19,9 @@ package memif
 import (
 	"context"
 
-	"github.com/networkservicemesh/govpp/binapi/memif"
+	"github.com/NikitaSkrynnik/govpp/binapi/memif"
 
-	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
+	"github.com/NikitaSkrynnik/sdk/pkg/networkservice/utils/metadata"
 )
 
 type key struct{}
