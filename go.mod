@@ -6,8 +6,8 @@ require (
 	git.fd.io/govpp.git v0.3.6-0.20210927044411-385ccc0d8ba9
 	github.com/NikitaSkrynnik/api v1.0.1-0.20230711064101-51396a9946fc
 	github.com/NikitaSkrynnik/govpp v0.0.0-20230711065959-e2b65ca34c90
-	github.com/NikitaSkrynnik/sdk v0.5.1-0.20230711075046-ee7a03ccef6b
-	github.com/NikitaSkrynnik/sdk-kernel v0.0.0-20230711075359-f636ce25c18b
+	github.com/NikitaSkrynnik/sdk v0.5.1-0.20230711075620-e72c833061bd
+	github.com/NikitaSkrynnik/sdk-kernel v0.0.0-20230711075820-31dc010d0ed5
 	github.com/cilium/ebpf v0.10.0
 	github.com/edwarnicke/serialize v1.0.7
 	github.com/golang/protobuf v1.5.3
