@@ -4,13 +4,13 @@ go 1.20
 
 require (
 	git.fd.io/govpp.git v0.3.6-0.20210927044411-385ccc0d8ba9
+	github.com/NikitaSkrynnik/govpp v0.0.0-20230828141809-0c9103556c7f
 	github.com/cilium/ebpf v0.10.0
 	github.com/edwarnicke/serialize v1.0.7
 	github.com/golang/protobuf v1.5.3
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/networkservicemesh/api v1.9.1-0.20230627143611-9785eacf9687
-	github.com/networkservicemesh/govpp v0.0.0-20230630105900-092690d52a97
 	github.com/networkservicemesh/sdk v0.5.1-0.20230801094133-aeae47c771a6
 	github.com/networkservicemesh/sdk-kernel v0.0.0-20230801094449-a44938ecb60d
 	github.com/pkg/errors v0.9.1

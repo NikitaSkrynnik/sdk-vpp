@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/wireguard"
+	"github.com/NikitaSkrynnik/govpp/binapi/wireguard"
 	"github.com/pkg/errors"
 	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 

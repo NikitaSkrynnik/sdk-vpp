@@ -33,21 +33,21 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/ikev2_types"
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/govpp/binapi/ip"
-	"github.com/networkservicemesh/govpp/binapi/ip_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/ikev2_types"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip_types"
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 	"github.com/pkg/errors"
 
 	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
 	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
 
+	"github.com/NikitaSkrynnik/govpp/binapi/ikev2"
+	ipsecapi "github.com/NikitaSkrynnik/govpp/binapi/ipsec"
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/ipsec"
-	"github.com/networkservicemesh/govpp/binapi/ikev2"
-	ipsecapi "github.com/networkservicemesh/govpp/binapi/ipsec"
 )
 
 // create - creates IPSEC with IKEv2

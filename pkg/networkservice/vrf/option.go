@@ -19,7 +19,7 @@ package vrf
 import (
 	"sync"
 
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 
 	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
 )

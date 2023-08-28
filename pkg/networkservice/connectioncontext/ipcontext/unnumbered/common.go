@@ -23,9 +23,9 @@ import (
 	"github.com/pkg/errors"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
 
 	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
 

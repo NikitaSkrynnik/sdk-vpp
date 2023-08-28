@@ -24,12 +24,12 @@ import (
 	"time"
 
 	"git.fd.io/govpp.git/api"
-	"github.com/networkservicemesh/govpp/binapi/acl"
-	"github.com/networkservicemesh/govpp/binapi/acl_types"
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
-	"github.com/networkservicemesh/govpp/binapi/ip"
-	"github.com/networkservicemesh/govpp/binapi/ip_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/acl"
+	"github.com/NikitaSkrynnik/govpp/binapi/acl_types"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip"
+	"github.com/NikitaSkrynnik/govpp/binapi/ip_types"
 	"github.com/pkg/errors"
 
 	"github.com/networkservicemesh/sdk/pkg/tools/log"

@@ -19,7 +19,7 @@ package unnumbered
 import (
 	"context"
 
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 	"github.com/pkg/errors"
 
 	"git.fd.io/govpp.git/api"

@@ -17,8 +17,8 @@
 package loopback
 
 import (
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 	"github.com/edwarnicke/serialize"
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
 )
 
 type loopInfo struct {

@@ -26,7 +26,7 @@ import (
 	"git.fd.io/govpp.git/api"
 	"github.com/pkg/errors"
 
-	interfaces "github.com/networkservicemesh/govpp/binapi/interface"
+	interfaces "github.com/NikitaSkrynnik/govpp/binapi/interface"
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 )
 

@@ -20,7 +20,7 @@ package ifindex
 import (
 	"context"
 
-	"github.com/networkservicemesh/govpp/binapi/interface_types"
+	"github.com/NikitaSkrynnik/govpp/binapi/interface_types"
 
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 )
