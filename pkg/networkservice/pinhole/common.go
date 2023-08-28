@@ -34,7 +34,7 @@ import (
 
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 const (

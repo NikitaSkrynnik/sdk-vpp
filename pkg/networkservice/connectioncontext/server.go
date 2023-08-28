@@ -25,10 +25,10 @@ import (
 
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/connectioncontext/mtu"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/ipaddress"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/routes"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/ipaddress"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/connectioncontext/ipcontext/routes"
 )
 
 // NewServer creates a NetworkServiceServer chain element to set the ip address on a vpp interface

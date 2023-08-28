@@ -41,8 +41,8 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 
 	"github.com/NikitaSkrynnik/govpp/binapi/ikev2"
 	ipsecapi "github.com/NikitaSkrynnik/govpp/binapi/ipsec"

@@ -32,9 +32,9 @@ import (
 
 	"github.com/networkservicemesh/sdk-kernel/pkg/kernel/tools/peer"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/up"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/up"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 func create(ctx context.Context, conn *networkservice.Connection, vppConn api.Connection, isClient bool) error {

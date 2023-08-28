@@ -34,7 +34,7 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/proxy"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/proxy"
 )
 
 const memifNetwork = "unixpacket"

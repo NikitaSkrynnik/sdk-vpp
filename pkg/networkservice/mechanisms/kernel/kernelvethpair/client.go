@@ -27,7 +27,7 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair/mtu"
 
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/cls"
@@ -36,8 +36,8 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair/afpacket"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair/ipneighbor"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair/afpacket"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair/ipneighbor"
 )
 
 type kernelVethPairClient struct{}

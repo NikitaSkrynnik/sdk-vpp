@@ -22,8 +22,8 @@ import (
 
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/xconnect/l2xconnect"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/xconnect/l3xconnect"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/xconnect/l2xconnect"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/xconnect/l3xconnect"
 )
 
 // NewClient - creates new xconnect client chain element to that correctly handles payload.IP and payload.Ethernet

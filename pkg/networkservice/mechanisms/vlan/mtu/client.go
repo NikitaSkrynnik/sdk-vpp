@@ -31,7 +31,7 @@ import (
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/vlan"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 type mtuClient struct {

@@ -36,7 +36,7 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/count"
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/nsmonitor"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/nsmonitor"
 )
 
 const (

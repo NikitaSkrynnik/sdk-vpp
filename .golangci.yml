@@ -21,7 +21,7 @@ linters-settings:
   revive:
     min-confidence: 0.8
   goimports:
-    local-prefixes: github.com/networkservicemesh/sdk-vpp/
+    local-prefixes: github.com/NikitaSkrynnik/sdk-vpp/
   goheader:
     template-path: ".ci/license/template.txt"
     values:

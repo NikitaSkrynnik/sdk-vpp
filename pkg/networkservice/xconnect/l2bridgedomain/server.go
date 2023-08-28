@@ -30,7 +30,7 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/vlan"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/vlan"
 )
 
 type l2BridgeDomainServer struct {

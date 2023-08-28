@@ -27,7 +27,7 @@ import (
 	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/kernel"
 	"github.com/stretchr/testify/require"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/memif"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/memif"
 
 	"github.com/networkservicemesh/sdk/pkg/networkservice/core/chain"
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"

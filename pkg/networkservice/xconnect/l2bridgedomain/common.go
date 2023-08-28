@@ -30,7 +30,7 @@ import (
 
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 type bridgeDomain struct {

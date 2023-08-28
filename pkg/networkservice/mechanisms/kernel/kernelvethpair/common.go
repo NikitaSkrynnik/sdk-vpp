@@ -36,10 +36,10 @@ import (
 	"github.com/networkservicemesh/sdk-kernel/pkg/kernel/tools/peer"
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ethtool"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/link"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/mechutils"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ethtool"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/link"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/mechutils"
 )
 
 func create(ctx context.Context, conn *networkservice.Connection, isClient bool) error {

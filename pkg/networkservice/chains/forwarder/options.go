@@ -28,8 +28,8 @@ import (
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 	"github.com/networkservicemesh/sdk/pkg/networkservice/common/cleanup"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/vxlan"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/stats"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/vxlan"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/stats"
 )
 
 type forwarderOptions struct {

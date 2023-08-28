@@ -34,9 +34,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/vishvananda/netlink"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/link"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/link"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Connection, isClient, isAdd bool) error {

@@ -25,9 +25,9 @@ import (
 	"git.fd.io/govpp.git/api"
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kernelvethpair"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel/kerneltap"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/kernel/kerneltap"
 )
 
 // NewClient - returns a new Client chain element implementing the kernel mechanism with vpp

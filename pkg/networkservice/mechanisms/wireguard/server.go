@@ -35,8 +35,8 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/wireguard/mtu"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/wireguard/peer"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/wireguard/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/wireguard/peer"
 )
 
 type wireguardServer struct {

@@ -32,8 +32,8 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/core/next"
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/vlan/l2vtr"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/vlan/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/vlan/l2vtr"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/vlan/mtu"
 )
 
 const (

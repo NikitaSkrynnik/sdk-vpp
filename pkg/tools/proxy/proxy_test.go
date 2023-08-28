@@ -33,7 +33,7 @@ import (
 	"github.com/vishvananda/netns"
 	"go.uber.org/goleak"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/proxy"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/proxy"
 )
 
 const (

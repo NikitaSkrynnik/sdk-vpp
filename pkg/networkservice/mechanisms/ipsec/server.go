@@ -32,8 +32,8 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/ipsec/mtu"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/pinhole"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/ipsec/mtu"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/pinhole"
 )
 
 type ipsecServer struct {

@@ -34,7 +34,7 @@ import (
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Connection, loadIfIndex ifIndexFunc, isClient, isAdd bool) error {

@@ -30,7 +30,7 @@ import (
 
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/wireguard/peer"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/mechanisms/wireguard/peer"
 )
 
 // Connection - simply combines tha api.Connection and api.ChannelProvider interfaces

@@ -38,8 +38,8 @@ import (
 	"github.com/vishvananda/netns"
 	"golang.org/x/sys/unix"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/up"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/up"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 // Connection aggregates the api.Connection and api.ChannelProvider interfaces

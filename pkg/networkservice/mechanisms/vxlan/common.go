@@ -33,8 +33,8 @@ import (
 	vxlanMech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/vxlan"
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/types"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/types"
 )
 
 func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Connection, isAdd, isClient bool) error {

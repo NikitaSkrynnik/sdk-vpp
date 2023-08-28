@@ -1,4 +1,4 @@
-module github.com/networkservicemesh/sdk-vpp
+module github.com/NikitaSkrynnik/sdk-vpp
 
 go 1.20
 

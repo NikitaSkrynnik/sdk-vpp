@@ -32,9 +32,9 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 	"github.com/networkservicemesh/sdk/pkg/tools/postpone"
 
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/up/ipsecup"
-	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/up/peerup"
-	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/up/ipsecup"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/networkservice/up/peerup"
+	"github.com/NikitaSkrynnik/sdk-vpp/pkg/tools/ifindex"
 )
 
 type upClient struct {
