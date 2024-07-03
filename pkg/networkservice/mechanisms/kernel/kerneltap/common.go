@@ -148,7 +148,8 @@ func del(ctx context.Context, conn *networkservice.Connection, vppConn api.Conne
 		}
 		now := time.Now()
 
-		timeoutCtx, _ := context.WithTimeout(context.Background(), time.Minute*2)
+		timeoutCtx, timeoutCancel := context.WithTimeout(context.Background(), time.Minute*2)
+		defer timeoutCancel()
 		_, err := tapv2.NewServiceClient(vppConn).TapDeleteV2(timeoutCtx, &tapv2.TapDeleteV2{
 			SwIfIndex: swIfIndex,
 		})

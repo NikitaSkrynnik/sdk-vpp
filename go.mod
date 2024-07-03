@@ -25,8 +25,6 @@ require (
 	google.golang.org/protobuf v1.33.0
 )
 
-replace github.com/networkservicemesh/sdk => ../sdk
-
 require (
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/OneOfOne/xxhash v1.2.8 // indirect
