@@ -40,12 +40,22 @@ import (
 )
 
 func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Connection, isAdd, isClient bool) error {
+	deadline, ok := ctx.Deadline()
+	if !ok {
+		log.FromContext(ctx).Infof("NOO DEADLINE~!!!!!")
+	}
+
+	dur := time.Since(deadline)
+	log.FromContext(ctx).Infof("CONTEXT DEADLILNE IN: %v", dur.String())
+
+	index, ok := ifindex.Load(ctx, isClient)
+	log.FromContext(ctx).Infof("LOADED VXLAN (POSSIBLY) INDEX: %v, OK: %v", index, ok)
+
 	if mechanism := vxlanMech.ToMechanism(conn.GetMechanism()); mechanism != nil {
 		port := mechanism.DstPort()
 		if isClient {
 			port = mechanism.SrcPort()
 		}
-		_, ok := ifindex.Load(ctx, isClient)
 		if isAdd && ok {
 			return nil
 		}
@@ -73,7 +83,13 @@ func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Co
 			}
 		}
 
-		addNextNodeRsp, err := vlib.NewServiceClient(vppConn).AddNodeNext(ctx, addNextNode)
+		var addNextNodeRsp *vlib.AddNodeNextReply
+		var err error
+		if dur < time.Second && !isAdd {
+			addNextNodeRsp, err = vlib.NewServiceClient(vppConn).AddNodeNext(context.Background(), addNextNode)
+		} else {
+			addNextNodeRsp, err = vlib.NewServiceClient(vppConn).AddNodeNext(ctx, addNextNode)
+		}
 		if err != nil {
 			return errors.Wrap(err, "vppapi AddNodeNext returned error")
 		}
@@ -83,7 +99,7 @@ func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Co
 			WithField("NodeName", addNextNode.NodeName).
 			WithField("NextName", addNextNode.NextName).
 			WithField("duration", time.Since(now)).
-			WithField("vppapi", "AddNodeNext").Debug("completed")
+			WithField("vppapi", "AddNodeNext").Debugf("completed")
 
 		now = time.Now()
 		vxlanAddDelTunnel := &vxlan.VxlanAddDelTunnelV3{
@@ -101,7 +117,13 @@ func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Co
 			vxlanAddDelTunnel.DstAddress = types.ToVppAddress(mechanism.SrcIP())
 		}
 
-		rsp, err := vxlan.NewServiceClient(vppConn).VxlanAddDelTunnelV3(ctx, vxlanAddDelTunnel)
+		var rsp *vxlan.VxlanAddDelTunnelV3Reply
+
+		if dur < time.Second && !isAdd {
+			rsp, err = vxlan.NewServiceClient(vppConn).VxlanAddDelTunnelV3(context.Background(), vxlanAddDelTunnel)
+		} else {
+			rsp, err = vxlan.NewServiceClient(vppConn).VxlanAddDelTunnelV3(ctx, vxlanAddDelTunnel)
+		}
 		if err != nil {
 			return errors.Wrap(err, "vppapi VxlanAddDelTunnelV3 returned error")
 		}
@@ -112,15 +134,15 @@ func addDel(ctx context.Context, conn *networkservice.Connection, vppConn api.Co
 			WithField("DstAddress", vxlanAddDelTunnel.DstAddress).
 			WithField("Vni", vxlanAddDelTunnel.Vni).
 			WithField("duration", time.Since(now)).
-			WithField("vppapi", "VxlanAddDelTunnelV3").Debug("completed")
+			WithField("vppapi", "VxlanAddDelTunnelV3").Debugf("completed")
 		if isAdd {
 			ifindex.Store(ctx, isClient, rsp.SwIfIndex)
 		} else {
 			ifindex.Delete(ctx, isClient)
 		}
+	} else {
+		log.FromContext(ctx).WithField("vxlan", "addDel").Debugf("not vxlan mechanism")
 	}
-
-	log.FromContext(ctx).WithField("vxlan", "addDel").Debugf("not vxlan mechanism")
 
 	return nil
 }

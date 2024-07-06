@@ -30,8 +30,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/golang/protobuf/ptypes/empty"
 	"github.com/google/uuid"
 	"go.fd.io/govpp/api"
+	"google.golang.org/protobuf/types/known/emptypb"
 
 	"github.com/networkservicemesh/api/pkg/api/networkservice"
 	ipsecapi "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/ipsec"
@@ -49,6 +51,7 @@ import (
 	"github.com/networkservicemesh/sdk/pkg/networkservice/common/mechanisms/sendfd"
 	"github.com/networkservicemesh/sdk/pkg/networkservice/common/mechanismtranslation"
 	"github.com/networkservicemesh/sdk/pkg/networkservice/common/roundrobin"
+	"github.com/networkservicemesh/sdk/pkg/networkservice/core/next"
 	"github.com/networkservicemesh/sdk/pkg/tools/log"
 	authmonitor "github.com/networkservicemesh/sdk/pkg/tools/monitorconnection/authorize"
 	"github.com/networkservicemesh/sdk/pkg/tools/token"
@@ -75,7 +78,32 @@ import (
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/up"
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/xconnect"
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/xconnect/l2bridgedomain"
+	"github.com/networkservicemesh/sdk-vpp/pkg/tools/ifindex"
 )
+
+type upServer struct {
+}
+
+// NewServer provides a NetworkServiceServer chain elements that 'up's the swIfIndex
+func NewUpServer() networkservice.NetworkServiceServer {
+	return &upServer{}
+}
+
+func (u *upServer) Request(ctx context.Context, request *networkservice.NetworkServiceRequest) (*networkservice.Connection, error) {
+	ctx = ifindex.WithConnID(ctx, request.Connection.Id)
+	conn, err := next.Server(ctx).Request(ctx, request)
+
+	log.FromContext(ctx).Info("WIH CONN ID CHAIN ELEMENT")
+
+	return conn, err
+
+}
+
+func (u *upServer) Close(ctx context.Context, conn *networkservice.Connection) (*empty.Empty, error) {
+	ctx = ifindex.WithConnID(ctx, conn.Id)
+	_, err := next.Server(ctx).Close(ctx, conn)
+	return &emptypb.Empty{}, err
+}
 
 type xconnectNSServer struct {
 	endpoint.Endpoint
@@ -115,6 +143,7 @@ func NewServer(ctx context.Context, tokenGenerator token.GeneratorFunc, vppConn 
 	rv := &xconnectNSServer{}
 	pinholeMutex := new(sync.Mutex)
 	additionalFunctionality := []networkservice.NetworkServiceServer{
+		NewUpServer(),
 		recvfd.NewServer(),
 		sendfd.NewServer(),
 		discover.NewServer(nsClient, nseClient),

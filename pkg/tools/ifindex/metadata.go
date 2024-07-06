@@ -19,55 +19,147 @@ package ifindex
 
 import (
 	"context"
+	"fmt"
+	"sync"
+	"time"
 
+	"github.com/edwarnicke/genericsync"
 	"github.com/networkservicemesh/govpp/binapi/interface_types"
-
-	"github.com/networkservicemesh/sdk/pkg/networkservice/utils/metadata"
 )
+
+var servermap genericsync.Map[string, interface_types.InterfaceIndex]
+var clientmap genericsync.Map[string, interface_types.InterfaceIndex]
+
+var print = func() {
+	for {
+		time.Sleep(time.Second * 10)
+
+		fmt.Println("SERVER MAP")
+		servermap.Range(func(key string, value interface_types.InterfaceIndex) bool {
+			fmt.Printf("\tkey: %v, value: %v\n", key, value)
+			return true
+		})
+
+		fmt.Println("CLIENT MAP")
+		clientmap.Range(func(key string, value interface_types.InterfaceIndex) bool {
+			fmt.Printf("\tkey: %v, value: %v\n", key, value)
+			return true
+		})
+	}
+}
+
+var once sync.Once
 
 type key struct{}
 
 // Store sets the interface_types.InterfaceIndex stored in per Connection.Id metadata.
 func Store(ctx context.Context, isClient bool, swIfIndex interface_types.InterfaceIndex) {
-	metadata.Map(ctx, isClient).Store(key{}, swIfIndex)
+	//metadata.Map(ctx, isClient).Store(key{}, swIfIndex)
+
+	once.Do(func() {
+		go print()
+	})
+
+	id := connIDFromCtx(ctx)
+	if id == "" {
+		return
+	}
+
+	if isClient {
+		clientmap.Store(id, swIfIndex)
+		return
+	}
+
+	servermap.Store(id, swIfIndex)
 }
 
 // Delete deletes the interface_types.InterfaceIndex stored in per Connection.Id metadata
 func Delete(ctx context.Context, isClient bool) {
-	metadata.Map(ctx, isClient).Delete(key{})
+
+	once.Do(func() {
+		go print()
+	})
+
+	id := connIDFromCtx(ctx)
+	if id == "" {
+		return
+	}
+
+	if isClient {
+		clientmap.Delete(id)
+		return
+	}
+
+	servermap.Delete(id)
 }
 
 // Load returns the interface_types.InterfaceIndex stored in per Connection.Id metadata, or nil if no
 // value is present.
 // The ok result indicates whether value was found in the per Connection.Id metadata.
 func Load(ctx context.Context, isClient bool) (value interface_types.InterfaceIndex, ok bool) {
-	rawValue, ok := metadata.Map(ctx, isClient).Load(key{})
-	if !ok {
+
+	once.Do(func() {
+		go print()
+	})
+
+	id := connIDFromCtx(ctx)
+	if id == "" {
 		return
 	}
-	value, ok = rawValue.(interface_types.InterfaceIndex)
-	return value, ok
+
+	if isClient {
+		return clientmap.Load(id)
+	}
+
+	return servermap.Load(id)
 }
 
 // LoadOrStore returns the existing interface_types.InterfaceIndex stored in per Connection.Id metadata if present.
 // Otherwise, it stores and returns the given nterface_types.InterfaceIndex.
 // The loaded result is true if the value was loaded, false if stored.
 func LoadOrStore(ctx context.Context, isClient bool, swIfIndex interface_types.InterfaceIndex) (value interface_types.InterfaceIndex, ok bool) {
-	rawValue, ok := metadata.Map(ctx, isClient).LoadOrStore(key{}, swIfIndex)
-	if !ok {
+
+	once.Do(func() {
+		go print()
+	})
+
+	id := connIDFromCtx(ctx)
+	if id == "" {
 		return
 	}
-	value, ok = rawValue.(interface_types.InterfaceIndex)
-	return value, ok
+
+	if isClient {
+		return clientmap.LoadOrStore(id, swIfIndex)
+	}
+
+	return servermap.LoadOrStore(id, swIfIndex)
 }
 
 // LoadAndDelete deletes the interface_types.InterfaceIndex stored in per Connection.Id metadata,
 // returning the previous value if any. The loaded result reports whether the key was present.
 func LoadAndDelete(ctx context.Context, isClient bool) (value interface_types.InterfaceIndex, ok bool) {
-	rawValue, ok := metadata.Map(ctx, isClient).LoadAndDelete(key{})
-	if !ok {
+
+	once.Do(func() {
+		go print()
+	})
+
+	id := connIDFromCtx(ctx)
+	if id == "" {
 		return
 	}
-	value, ok = rawValue.(interface_types.InterfaceIndex)
-	return value, ok
+
+	if isClient {
+		return clientmap.LoadAndDelete(id)
+	}
+
+	return servermap.LoadAndDelete(id)
+}
+
+func WithConnID(ctx context.Context, connID string) context.Context {
+	return context.WithValue(ctx, key{}, connID)
+}
+
+func connIDFromCtx(ctx context.Context) string {
+	val, _ := ctx.Value(key{}).(string)
+	return val
 }
