@@ -61,6 +61,7 @@ import (
 	"github.com/networkservicemesh/sdk-kernel/pkg/kernel/networkservice/ethernetcontext"
 
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/afxdppinhole"
+	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/asyncclose"
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/connectioncontext/mtu"
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/ipsec"
 	"github.com/networkservicemesh/sdk-vpp/pkg/networkservice/mechanisms/kernel"
@@ -115,6 +116,7 @@ func NewServer(ctx context.Context, tokenGenerator token.GeneratorFunc, vppConn 
 	rv := &xconnectNSServer{}
 	pinholeMutex := new(sync.Mutex)
 	additionalFunctionality := []networkservice.NetworkServiceServer{
+		asyncclose.NewServer(),
 		recvfd.NewServer(),
 		sendfd.NewServer(),
 		discover.NewServer(nsClient, nseClient),
